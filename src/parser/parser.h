@@ -13,9 +13,6 @@ Token get_current_token(Parser *);
 
 void consume_token(Parser *);
 
-int parse_expr(Parser *);
-int parse_stmt(Parser *);
-int parse_condition(Parser *);
-int parse
+void parse_if(Parser *); 
 
 #endif // PARSER_H

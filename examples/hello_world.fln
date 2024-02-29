@@ -1,0 +1,20 @@
+#import sys.io as io
+#import sys.runtime as rt
+#import sys.fio as file
+#import sys.admem as mem
+#import sys.strman as str
+
+vrfunc prints(string _) {
+  let const io_startmsg:int = none;
+  later {
+    io_startmsg = _;
+    del _;
+  } as now();
+
+  mem.alloc(&io_startmsg, <templ(now())>, mem.obuf());
+  let fs = io.makefs(rt.suit(io));
+  file iofs = io.fsinit(fs);
+  fsprintf(&iofs, startmsg);
+  return fprintf(startmsg, iofs);
+}
+
