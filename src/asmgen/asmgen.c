@@ -1,7 +1,7 @@
 #include "asmgen.h"
 #include <stdio.h>
 
-FILE *f
+FILE *f;
 
 void create_integer(long int value) {
 
